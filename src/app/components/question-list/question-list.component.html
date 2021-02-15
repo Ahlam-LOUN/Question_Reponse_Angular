@@ -1,0 +1,19 @@
+<!-- <h2>Question List</h2> -->
+<!-- <div *ngFor="let question of questions">
+  {{question.textQuestion}}
+  {{question.Language}}
+  {{question.dateDeCreation}}
+</div> -->
+
+<mat-card>
+  <mat-card-header>Question List</mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let question of questions">
+        <img mat-list-avatar src="./../../../assets/images/image_question.jpg" alt="problem"> 
+        <h3 mat-line>{{question.textQuestion}}</h3>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <button mat-fab color="primary" >Add</button>
+</mat-card>

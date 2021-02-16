@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  baseUrl: "http://localhost:8080/Questions"
+  baseUrl: "http://localhost:8080/Questions",
+  baseUrlReponse: "http://localhost:8080/Reponses"
+
 };
 
 /*

@@ -31,6 +31,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { QuestionService } from './services/question.service';
 import { QuestionAddComponent } from './components/question-add/question-add.component';
 import { QuestionEditComponent } from './components/question-edit/question-edit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReponseAddComponent } from './components/reponse-add/reponse-add.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { QuestionEditComponent } from './components/question-edit/question-edit.
     QuestionListComponent,
     QuestionDetailComponent,
     QuestionAddComponent,
-    QuestionEditComponent
+    QuestionEditComponent,
+    ReponseAddComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +71,8 @@ import { QuestionEditComponent } from './components/question-edit/question-edit.
     MatDatepickerModule,
     MatNativeDateModule,
     MatPaginatorModule,
-    MatTableModule 
+    MatTableModule,
+    BrowserAnimationsModule
 
   ],
   providers: [QuestionService],

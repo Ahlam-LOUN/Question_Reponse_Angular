@@ -3,7 +3,7 @@ export class Question{
     id:number;
     questionId:string;
 	textQuestion:string;
-	Language:string;
+	language:string;
     dateDeCreation:string;
 	lastModified:string;
     reponses:Reponse[];

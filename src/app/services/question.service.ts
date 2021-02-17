@@ -24,4 +24,8 @@ export class QuestionService {
   deleteQuestion(id: string): Observable<any> {  
     return this.http.delete(`${environment.baseUrl}/${id}`, { responseType: 'text' });  
   } 
+  addResponseToQuestion(questionId:string,reponseId:string):Observable<any>{
+    return this.http.put(`${environment.baseUrl}/${questionId}/${reponseId}`, { responseType: 'text' });  
+
+  }
 }

@@ -2,7 +2,7 @@ import {Question} from "./question"
 export class Reponse{
      reponseId:string;
 	 reponseQuestion:string;
-	 Language:string;
+	 language:string;
 	dateDeCreation:string;
 	lastModified:string;
 	scoreResponse:number;

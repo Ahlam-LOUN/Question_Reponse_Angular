@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { QuestionListComponent } from './components/question-list/question-list.component';
 import { QuestionAddComponent } from './components/question-add/question-add.component';
 import { QuestionEditComponent } from './components/question-edit/question-edit.component';
-import { ReponseAddComponent } from './components/reponse-add/reponse-add.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/questions", pathMatch: "full" },
@@ -17,10 +16,6 @@ const routes: Routes = [
   {
     path: 'question-edit/:id',
     component: QuestionEditComponent
-  },
-  {
-    path: 'reponse-add',
-    component: ReponseAddComponent
   }
 ]
 

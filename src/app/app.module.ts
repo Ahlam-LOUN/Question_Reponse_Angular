@@ -32,7 +32,6 @@ import { QuestionService } from './services/question.service';
 import { QuestionAddComponent } from './components/question-add/question-add.component';
 import { QuestionEditComponent } from './components/question-edit/question-edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReponseAddComponent } from './components/reponse-add/reponse-add.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +40,6 @@ import { ReponseAddComponent } from './components/reponse-add/reponse-add.compon
     QuestionDetailComponent,
     QuestionAddComponent,
     QuestionEditComponent,
-    ReponseAddComponent,
   ],
   imports: [
     BrowserModule,

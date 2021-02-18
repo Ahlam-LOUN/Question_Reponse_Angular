@@ -36,7 +36,7 @@ export class QuestionAddComponent implements OnInit {
       this.questionService.addResponseToQuestion(this.questionId,this.reponse.reponseId).subscribe(data => {  
         console.log(data);   
         this.ngOnInit();
-      },  
+      },   
       error => console.log(error))
     });
   }

@@ -28,4 +28,7 @@ export class QuestionService {
     return this.http.put(`${environment.baseUrl}/${questionId}/${reponseId}`, { responseType: 'text' });  
 
   }
+  deleteAllQuestion(): Observable<any> {  
+    return this.http.delete(`${environment.baseUrl}`, { responseType: 'text' });  
+  } 
 }

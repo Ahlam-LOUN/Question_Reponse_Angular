@@ -10,8 +10,8 @@ import { Observable } from 'rxjs';
 export class ReponseService {
 
   constructor(private http: HttpClient) { }
-  addReponse(data:Reponse,id:string) {
-    return this.http.post(`${environment.baseUrlReponse}/${id}`, data);
+  addReponse(data:Reponse) {
+    return this.http.post(`${environment.baseUrlReponse}`, data);
   }
 
 }

@@ -30,14 +30,16 @@ export class QuestionAddComponent implements OnInit {
 });
   }
   onSubmit() {
-    console.log("hhh"+this.questionId);  
-    this.reponseService.addReponse(this.reponse,this.questionId).subscribe((result:Reponse) => {
+    console.log("L'id question est :"+this.questionId);  
+    this.reponseService.addReponse(this.reponse).subscribe((result:Reponse) => {
       this.reponse=result,
+      console.log("L'id de reponse est :"+this.reponse.reponseId);  
       this.questionService.addResponseToQuestion(this.questionId,this.reponse.reponseId).subscribe(data => {  
-        console.log(data);   
-        this.ngOnInit();
-      },   
-      error => console.log(error))
+        console.log(data);  
+         
+      },  
+ 
+      error => console.log(error));
     });
   }
 

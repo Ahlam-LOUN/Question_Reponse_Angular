@@ -1,1 +1,26 @@
-<p>question-edit works!</p>
+<mat-card>
+    <form [formGroup]="questionForm"  (ngSubmit)="updateQuestion(question.questionId)">
+      <mat-card-header>
+        <mat-card-title><h2>{{question.textQuestion ? 'Edit' : 'Add'}} Question</h2></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field class="form-group">
+          <input matInput  class="form-control"  formControlName="question"placeholder="Question" [(ngModel)]="question.textQuestion"
+                 required name="textQuestion" >
+        </mat-form-field>
+    </mat-card-content>
+        <mat-card-content>
+        <mat-form-field class="form-group">
+            <input matInput class="form-control"  formControlName="language" placeholder="language" [(ngModel)]="question.language"
+                   required name="language" >
+          </mat-form-field>        
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button type="submit" class="btn btn-success" (click)="updateQuestion(question.questionId)" 
+         [disabled]="!questionForm.valid">Update</button>
+        <a mat-button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</a>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+  <div>
+

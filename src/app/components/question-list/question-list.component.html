@@ -5,10 +5,13 @@
       <mat-list-item *ngFor="let question of questions">
         <img mat-list-avatar src="./../../../assets/images/image_question.jpg" alt="problem"> 
         <h3 mat-line>
-        <a mat-button [routerLink]="['/question-edit', question.questionId]">{{question.textQuestion}}</a>
-       </h3>
+        <a mat-button  (click)="openDialog(question)">{{question.textQuestion}}</a>
+       <!-- <pm-question-detail [question]="question"></pm-question-detail> -->
+      </h3>
       </mat-list-item>
     </mat-list>
   </mat-card-content>
+
   <button mat-fab color="primary" [routerLink]="['/question-add']" >Add</button>
+  <button mat-fab color="primary" (click)="deleteAllQuestion()" >Delete all</button>
 </mat-card>

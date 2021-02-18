@@ -1,1 +1,23 @@
-<p>question-detail works!</p>
+
+      <h3 mat-dialog-title>Q: {{ question.textQuestion }}</h3>
+      <div mat-dialog-content>
+    <ul class="list-group list-group-flush"  style="list-style-type:none;">
+      <li class="list-group-item"> <strong>Language : </strong> {{ question.language}}</li>
+      <li class="list-group-item"><strong>Date de creation : </strong> {{ question.dateDeCreation }}</li>
+      <li class="list-group-item"><strong>Derniere modification : </strong> {{ question.lastModified }}</li>
+    </ul>
+    </div>
+    <div mat-dialog-actions> 
+        <button mat-raised-button [routerLink]="['/question-edit',question.questionId]" class="btn btn-primary mr-2">Edit</button>
+        <button  mat-raised-button class="btn btn-dark mr-2" (click)="deleteQuestion(question.questionId)">Delete</button>
+        <button mat-button mat-dialog-close>Close</button>
+        
+    </div>
+
+    
+      
+
+  
+  
+
+  

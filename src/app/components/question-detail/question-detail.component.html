@@ -8,7 +8,7 @@
     </ul>
     </div>
     <div mat-dialog-actions> 
-        <button mat-raised-button [routerLink]="['/question-edit',question.questionId]" class="btn btn-primary mr-2">Edit</button>
+        <button mat-raised-button (click)="openDialog(question)" class="btn btn-primary mr-2">Edit</button>
         <button  mat-raised-button class="btn btn-dark mr-2" (click)="deleteQuestion(question.questionId)">Delete</button>
         <button mat-button mat-dialog-close>Close</button>
         

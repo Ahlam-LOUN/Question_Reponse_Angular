@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Question } from 'src/app/models/question';
 import { QuestionService } from 'src/app/services/question.service';
+import { QuestionEditComponent } from '../question-edit/question-edit.component';
 
 @Component({
   selector: 'pm-question-detail',
@@ -13,7 +15,7 @@ export class QuestionDetailComponent implements OnInit {
   @Output() editQuestion = new EventEmitter();
 
 
-  constructor(private questionService: QuestionService) { }
+  constructor(private questionService: QuestionService,public dialog: MatDialog) { }
 
   ngOnInit(): void {
 
@@ -24,5 +26,10 @@ export class QuestionDetailComponent implements OnInit {
     
     });
   }
+  openDialog(question:Question) {
+    const modalRef=this.dialog.open(QuestionEditComponent);
+    modalRef.componentInstance.question = question;
+  }
+  
 
 }

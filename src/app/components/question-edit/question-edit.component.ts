@@ -35,7 +35,7 @@ export class QuestionEditComponent implements OnInit {
   this.question=new Question();   
   this.question.questionId=questionId;  
   this.question.textQuestion=this.textQuestion.value;  
-  this.question.language=this.language.value;      
+  this.question.language=this.language.value; 
   this.questionService.updateQuestion(this.question.questionId,this.question).subscribe(  
    data =>console.log(data));
        

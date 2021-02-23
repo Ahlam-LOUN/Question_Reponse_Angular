@@ -25,7 +25,7 @@
   <div>
 
     <mat-card>
-      <form #reponseForm="ngForm" (ngSubmit)="onSubmit()">
+      <form #reponseForm="ngForm" (ngSubmit)="addreponse(reponseForm)">
         <mat-card-header>
           <mat-card-title><h2>{{reponse.reponseQuestion ? 'Edit' : 'Add'}} Reponses</h2></mat-card-title>
         </mat-card-header>

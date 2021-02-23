@@ -29,17 +29,16 @@ export class QuestionAddComponent implements OnInit {
   this.questionId=this.question.questionId;
 });
   }
-  onSubmit() {
+  addreponse(reponseForm: any) {
     console.log("L'id question est :"+this.questionId);  
+    this.reponse = new Reponse();
     this.reponseService.addReponse(this.reponse).subscribe((result:Reponse) => {
-      this.reponse=result,
-      console.log("L'id de reponse est :"+this.reponse.reponseId);  
-      this.questionService.addResponseToQuestion(this.questionId,this.reponse.reponseId).subscribe(data => {  
-        console.log(data);  
-         
-      },  
- 
-      error => console.log(error));
+    this.reponse=result,
+    console.log("L'id de reponse est :"+this.reponse.reponseId); 
+    this.questionService.addResponseToQuestion(this.questionId,this.reponse.reponseId).subscribe(data => {  
+    console.log(data);},  
+    error => console.log(error));
+    reponseForm.form.resetForm(); 
     });
   }
 
